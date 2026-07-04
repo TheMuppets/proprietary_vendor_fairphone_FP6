@@ -1083,7 +1083,6 @@ PRODUCT_PACKAGES += \
     libvideotxr \
     libvideoutils \
     libvmfilexfer \
-    libvmmem \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
     libwfdconfigutils_proprietary \
