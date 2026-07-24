@@ -460,6 +460,21 @@ PRODUCT_COPY_FILES += \
     vendor/fairphone/FP6/proprietary/vendor/firmware/haptic_rtp_lighthouse.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/haptic_rtp_lighthouse.bin \
     vendor/fairphone/FP6/proprietary/vendor/firmware/haptic_rtp_osc_24K_5s.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/haptic_rtp_osc_24K_5s.bin \
     vendor/fairphone/FP6/proprietary/vendor/firmware/haptic_rtp_silk.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/haptic_rtp_silk.bin \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/bdwlan.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/bdwlan.elf \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/regdb.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/regdb.bin \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b00 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b01 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b02 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b03 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b04 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b05 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b06 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b07 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b08 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b09 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b10 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.b12 \
+    vendor/fairphone/FP6/proprietary/vendor/firmware/qca6750/wpss.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/qca6750/wpss.mdt \
     vendor/fairphone/FP6/proprietary/vendor/firmware/sec_s3nrn4v_firmware.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/sec_s3nrn4v_firmware.bin \
     vendor/fairphone/FP6/proprietary/vendor/firmware/vpu20_2v.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.mbn \
     vendor/fairphone/FP6/proprietary/vendor/firmware/vpu20_2v_unsigned.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v_unsigned.mbn \
