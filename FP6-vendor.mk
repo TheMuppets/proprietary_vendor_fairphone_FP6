@@ -15,6 +15,7 @@ PRODUCT_COPY_FILES += \
     vendor/fairphone/FP6/proprietary/system_ext/etc/init/tcmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/tcmd.rc \
     vendor/fairphone/FP6/proprietary/system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc \
     vendor/fairphone/FP6/proprietary/system_ext/etc/init/vendor.qti.qccsyshal_aidl-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.qccsyshal_aidl-service.rc \
+    vendor/fairphone/FP6/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
     vendor/fairphone/FP6/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
     vendor/fairphone/FP6/proprietary/system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.qcc.vendor_qcc.xml \
     vendor/fairphone/FP6/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
@@ -23,8 +24,10 @@ PRODUCT_COPY_FILES += \
     vendor/fairphone/FP6/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
     vendor/fairphone/FP6/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     vendor/fairphone/FP6/proprietary/system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.ims.rcsservice.xml \
+    vendor/fairphone/FP6/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
     vendor/fairphone/FP6/proprietary/system_ext/etc/qspa/qspa_default.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/qspa/qspa_default.rc \
     vendor/fairphone/FP6/proprietary/system_ext/etc/seccomp_policy/tcmd.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/tcmd.policy \
+    vendor/fairphone/FP6/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/fairphone/FP6/proprietary/system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_system_packages_config.xml \
     vendor/fairphone/FP6/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
     vendor/fairphone/FP6/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
@@ -1276,10 +1279,29 @@ PRODUCT_PACKAGES += \
     libimsmedia_jni \
     libmmosal \
     libmmparser_lite \
+    libmmrtpdecoder \
+    libmmrtpencoder \
     libqcc \
     libqcc_file_agent_sys \
     libqccdme \
     libqccfileservice \
+    libwfdavenhancements \
+    libwfdclient \
+    libwfdcommonutils \
+    libwfdconfigutils \
+    libwfddisplayconfig \
+    libwfdmminterface \
+    libwfdmmsink \
+    libwfdmmsrc_system \
+    libwfdnative \
+    libwfdrtsp \
+    libwfdservice \
+    libwfdsinksm \
+    libwfduibcinterface \
+    libwfduibcsink \
+    libwfduibcsinkinterface \
+    libwfduibcsrc \
+    libwfduibcsrcinterface \
     vendor.qti.ImsRtpService-V1-ndk \
     vendor.qti.ImsRtpService-V2-ndk \
     vendor.qti.diaghal@1.0 \
@@ -1290,6 +1312,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccsyshal@1.2-halimpl \
     vendor.qti.hardware.qccsyshal@1.2 \
     vendor.qti.hardware.qccvndhal@1.0 \
+    vendor.qti.hardware.wifidisplaysession@1.0 \
+    vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
     vendor.qti.qccsyshal_aidl-V1-ndk \
@@ -1309,9 +1333,11 @@ PRODUCT_PACKAGES += \
     QCC \
     QtiTelephonyService \
     QtiTelephony \
+    WfdService \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
+    WfdCommon \
     uimgbalibrary \
     uimservicelibrary \
     com.qti.dpmframework \
@@ -1473,11 +1499,16 @@ PRODUCT_PACKAGES += \
     dpmd \
     qccsyshal@1.2-service \
     qccsyshal_aidl-service \
-    tcmd
+    tcmd \
+    wfdservice64
 
 PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so \
     system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so \
+    system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so \
     vendor_lib64_libEGL_adreno_so \
     vendor_lib64_libGLESv2_adreno_so \
     vendor_lib64_libq3dtools_adreno_so
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
