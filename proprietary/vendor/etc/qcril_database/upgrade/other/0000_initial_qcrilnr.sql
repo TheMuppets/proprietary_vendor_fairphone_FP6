@@ -70,6 +70,8 @@ INSERT INTO qcril_emergency_source_mcc_table VALUES('470','108',NULL,NULL);
 INSERT INTO qcril_emergency_source_mcc_table VALUES('470','112',NULL,NULL);
 INSERT INTO qcril_emergency_source_mcc_table VALUES('234','999','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('505','000','','');
+/* Add for FPSW-1292 911 specifically for (MCC=238) */
+INSERT INTO qcril_emergency_source_mcc_table VALUES('238','911','','');
 CREATE TABLE qcril_emergency_source_voice_table(MCC TEXT, NUMBER TEXT, IMS_ADDRESS TEXT, SERVICE TEXT, PRIMARY KEY(MCC,NUMBER));
 INSERT INTO qcril_emergency_source_voice_table VALUES('460','110','','full');
 INSERT INTO qcril_emergency_source_voice_table VALUES('460','119','','full');
@@ -550,6 +552,8 @@ INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('228','01','147','
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('228','01','1414','','');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('228','01','0800117117','','');
 /*Add for FPS-1932 [FPS]Swisscom implement end */
+/* Add for FPSW-1292 911 specifically for Yousee (MCC=238, MNC=001) */
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('238','001','911','','');
 /*Add for FPS-1931 [FPS]Sunrise implement begin */
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('228','02','143','','');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('228','02','145','','');
