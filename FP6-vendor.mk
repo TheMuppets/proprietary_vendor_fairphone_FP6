@@ -231,7 +231,6 @@ PRODUCT_COPY_FILES += \
     vendor/fairphone/FP6/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/fairphone/FP6/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
     vendor/fairphone/FP6/proprietary/vendor/etc/init/dpmQmiMgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dpmQmiMgr.rc \
-    vendor/fairphone/FP6/proprietary/vendor/etc/init/fingerprint-FP6.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-FP6.rc \
     vendor/fairphone/FP6/proprietary/vendor/etc/init/hw/init.qti.kernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc \
     vendor/fairphone/FP6/proprietary/vendor/etc/init/ims-dataservice-daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims-dataservice-daemon.rc \
     vendor/fairphone/FP6/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
@@ -1363,7 +1362,6 @@ PRODUCT_PACKAGES += \
     datafactoryservice-saidl.xml \
     deviceinfo-saidl.xml \
     dpm-saidl.xml \
-    fingerprint-FP6.xml \
     imsdcservice-saidl.xml \
     mwqem-saidl.xml \
     qcrilhook-saidl.xml \
@@ -1402,7 +1400,6 @@ PRODUCT_PACKAGES += \
     dpmQmiMgr \
     dspservice \
     edgnss-daemon \
-    android.hardware.biometrics.fingerprint-service \
     android.hardware.bluetooth@1.1-service-qti \
     android.hardware.gatekeeper-service-qti \
     android.hardware.security.keymint-service-qti \
